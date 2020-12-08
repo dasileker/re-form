@@ -17,3 +17,11 @@ DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed i
  (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
 DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
  (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
