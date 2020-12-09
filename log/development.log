@@ -1,0 +1,169 @@
+  [1m[35m (95.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (18.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20201208144727)
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "email" varchar, "password" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (17.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20201208144727"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-12-08 14:50:49.698461"], ["updated_at", "2020-12-08 14:50:49.698461"]]
+  [1m[35m (22.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from block in execute at /usr/share/rubygems-integration/all/gems/rake-13.0.1/lib/rake/task.rb:281)
+Started GET "/users/new" for ::1 at 2020-12-08 16:17:09 +0100
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 135.9ms | Allocations: 281)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/adewunmi/re-form/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.44.2
+Time: 24680ms
+Built at: 12/08/2020 4:18:36 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 87496ms (Views: 87030.2ms | ActiveRecord: 0.0ms | Allocations: 18386)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 11:58:15 +0100
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 133.5ms | Allocations: 4234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1859ms (Views: 1762.2ms | ActiveRecord: 9.5ms | Allocations: 28547)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:20:58 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 152ms (Views: 148.2ms | ActiveRecord: 0.0ms | Allocations: 5348)
+
+
+Started POST "/users" for ::1 at 2020-12-09 12:21:14 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"IbfVom52w4rm8hT9D6Ji1jD6zE0syh/3NnSRIrPgTgB1E+Oi9UTaLMmiueJ/WP/NopgizlKyMb/u1W3wpQZv8A==", "user"=>{"username"=>"dasileker", "password"=>"[FILTERED]", "email"=>"zerradi.amine@hotmail.com"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (7.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "dasileker"], ["email", "zerradi.amine@hotmail.com"], ["password", "19900813"], ["created_at", "2020-12-09 11:21:14.450708"], ["updated_at", "2020-12-09 11:21:14.450708"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 55ms (ActiveRecord: 14.5ms | Allocations: 5073)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:21:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 600)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 222ms (Views: 220.5ms | ActiveRecord: 0.0ms | Allocations: 4915)
+
+
+Started GET "/users" for ::1 at 2020-12-09 12:21:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-09 12:21:51 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"5Pj/0TnmtVRtw764KvUx4rjkEXKH5nvwQzD7agiqKJGwXMnRotSs8kKTE6daD6z5Kob/8fmeVbibkQe4HkwJYQ==", "user"=>{"username"=>"zerradi", "password"=>"[FILTERED]", "email"=>"dasileker@gmail.com"}, "button"=>""}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (10.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "zerradi"], ["email", "dasileker@gmail.com"], ["password", "kjkhvhivhv"], ["created_at", "2020-12-09 11:21:51.629724"], ["updated_at", "2020-12-09 11:21:51.629724"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 83ms (ActiveRecord: 17.6ms | Allocations: 3941)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:21:51 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 423ms (Views: 421.3ms | ActiveRecord: 0.0ms | Allocations: 5189)
+
+
+Started POST "/users" for ::1 at 2020-12-09 12:22:04 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"wyOQK/8Oi+GRX6JQTAT0fPT9gnrOINCuvl3bIOVzywqXh6YrZDySR74PD088/mlnZp9s+bBY/uZm/Cfy85Xq+g==", "user"=>{"username"=>"zerradi", "password"=>"[FILTERED]", "email"=>"zerradi.amine@hotmail.com"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (9.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "zerradi"], ["email", "zerradi.amine@hotmail.com"], ["password", "vhvkvhvhkv"], ["created_at", "2020-12-09 11:22:04.700196"], ["updated_at", "2020-12-09 11:22:04.700196"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 38ms (ActiveRecord: 13.9ms | Allocations: 2704)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:22:04 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 143ms (Views: 141.2ms | ActiveRecord: 0.0ms | Allocations: 4426)
+
+
