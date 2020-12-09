@@ -1,10 +1,32 @@
+
+<%# <form accept-charset="UTF-8" action="/users"  method="post">
+  <label for="uname">Username:</label>
+  <input type="text" id="uname" name="uname"><br><br>
+  <label for="email">E-mail:</label>
+  <input type="text" id="email" name="email"><br><br>
+  <label for="password">Password:</label>
+  <input type="text" id="password" name="password"><br><br>
+  <input type="submit" value="Submit">
+</form> %>
+
+<%# <%= form_tag("/users", method: "POST") do %>
+
+<%# <%= label_tag(:username, "Username:") %>
+<%# <%= text_field_tag(:username) %><br> 
+<%# <%= label_tag(:email, "E-mail:") %>
+<%# <%= email_field_tag(:email) %><br> 
+<%# <%= label_tag(:password, "Password:") %>
+<%# <%= password_field_tag(:password)  %>
+<%# <%= submit_tag("Submit") %>
+<%# <% end  %>
+
 <%= form_for @user do |f|%>
     <h3>Register here</h3>
-    <%= f.text_field :username, class: 'validate' %>
     <%= f.label :username, 'User name' %>
-    <%= f.password_field :password, class: 'validate' %>
+    <%= f.text_field :username, class: 'validate' %>
     <%= f.label :password, 'Password' %>
-    <%= f.email_field :email, placeholder: 'example@gmail.com', class: 'validate' %>
+    <%= f.password_field :password, class: 'validate' %>
     <%= f.label :email, 'E-mail' %>
+    <%= f.email_field :email, placeholder: 'example@gmail.com', class: 'validate' %>
     <%= f.button  class: ['waves-effect', 'waves-light', 'btn'] %>
 <% end %>

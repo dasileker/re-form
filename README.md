@@ -16,7 +16,7 @@ I have built a working form that lets you create and edit a user using Ruby on R
 
 ## Built With 🛠
 ```
-- Ruby: 2.6.3
+- Ruby: 2.7.2
 - Ruby on Rails: 6.0.3.4
 - VS Code
 ```

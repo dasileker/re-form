@@ -51,3 +51,119 @@ Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9
 Completed 200 OK in 87496ms (Views: 87030.2ms | ActiveRecord: 0.0ms | Allocations: 18386)
 
 
+Started GET "/users/new" for ::1 at 2020-12-09 11:58:15 +0100
+  [1m[35m (11.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 133.5ms | Allocations: 4234)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 1859ms (Views: 1762.2ms | ActiveRecord: 9.5ms | Allocations: 28547)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:20:58 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 152ms (Views: 148.2ms | ActiveRecord: 0.0ms | Allocations: 5348)
+
+
+Started POST "/users" for ::1 at 2020-12-09 12:21:14 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"IbfVom52w4rm8hT9D6Ji1jD6zE0syh/3NnSRIrPgTgB1E+Oi9UTaLMmiueJ/WP/NopgizlKyMb/u1W3wpQZv8A==", "user"=>{"username"=>"dasileker", "password"=>"[FILTERED]", "email"=>"zerradi.amine@hotmail.com"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (7.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "dasileker"], ["email", "zerradi.amine@hotmail.com"], ["password", "19900813"], ["created_at", "2020-12-09 11:21:14.450708"], ["updated_at", "2020-12-09 11:21:14.450708"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 55ms (ActiveRecord: 14.5ms | Allocations: 5073)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:21:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 600)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 222ms (Views: 220.5ms | ActiveRecord: 0.0ms | Allocations: 4915)
+
+
+Started GET "/users" for ::1 at 2020-12-09 12:21:31 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2020-12-09 12:21:51 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"5Pj/0TnmtVRtw764KvUx4rjkEXKH5nvwQzD7agiqKJGwXMnRotSs8kKTE6daD6z5Kob/8fmeVbibkQe4HkwJYQ==", "user"=>{"username"=>"zerradi", "password"=>"[FILTERED]", "email"=>"dasileker@gmail.com"}, "button"=>""}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (10.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "zerradi"], ["email", "dasileker@gmail.com"], ["password", "kjkhvhivhv"], ["created_at", "2020-12-09 11:21:51.629724"], ["updated_at", "2020-12-09 11:21:51.629724"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 83ms (ActiveRecord: 17.6ms | Allocations: 3941)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:21:51 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 423ms (Views: 421.3ms | ActiveRecord: 0.0ms | Allocations: 5189)
+
+
+Started POST "/users" for ::1 at 2020-12-09 12:22:04 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"wyOQK/8Oi+GRX6JQTAT0fPT9gnrOINCuvl3bIOVzywqXh6YrZDySR74PD088/mlnZp9s+bBY/uZm/Cfy85Xq+g==", "user"=>{"username"=>"zerradi", "password"=>"[FILTERED]", "email"=>"zerradi.amine@hotmail.com"}, "button"=>""}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[36mUser Create (9.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "zerradi"], ["email", "zerradi.amine@hotmail.com"], ["password", "vhvkvhvhkv"], ["created_at", "2020-12-09 11:22:04.700196"], ["updated_at", "2020-12-09 11:22:04.700196"]]
+  ↳ app/controllers/users_controller.rb:9:in `create'
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 38ms (ActiveRecord: 13.9ms | Allocations: 2704)
+
+
+Started GET "/users/new" for ::1 at 2020-12-09 12:22:04 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 592)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 143ms (Views: 141.2ms | ActiveRecord: 0.0ms | Allocations: 4426)
+
+
